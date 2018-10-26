@@ -2,44 +2,83 @@
 
 
 [[projects]]
-  branch = "master"
-  name = "github.com/go-akka/configuration"
-  packages = [".","hocon"]
-  revision = "755180b9a146a94d76051113e9624bdc8327c499"
+  digest = "1:81c293b834a3fbfc4da94de703aa41911679e7476f22184269b645a810b2ef10"
+  name = "github.com/drdaeman/logdna-logrus"
+  packages = ["."]
+  pruneopts = ""
+  revision = "48409db437e7e00eec11581375fe8bd9afb48e5f"
+  version = "v0.1.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:0e707b696482e29296973f605aae92ee90bc8e5299728d1f7201bca5f650d12c"
+  name = "github.com/go-akka/configuration"
+  packages = [
+    ".",
+    "hocon",
+  ]
+  pruneopts = ""
+  revision = "6065b2d05c3b6fe74694a73c9673806a970679e0"
+
+[[projects]]
+  branch = "master"
+  digest = "1:545053512529415ccbe9309a3e428dfaaff408772ed5f0c405ec7d467f47b8e0"
+  name = "github.com/gogap/config"
+  packages = ["."]
+  pruneopts = ""
+  revision = "a1522129698c2ffaf1089351ad23156a1208ed09"
+
+[[projects]]
+  branch = "master"
+  digest = "1:79cc6e5f73c9a3ff45328b5b4336f6af5e78adef3c663c311e158bf233e6ab83"
   name = "github.com/gogap/logrus_mate"
   packages = ["."]
-  revision = "e0cf2531d6c27c75074c7cb643c099341e78e3ed"
+  pruneopts = ""
+  revision = "d848243b0250547d699d7bf0b73827e9545bded2"
 
 [[projects]]
-  branch = "master"
-  name = "github.com/orcaman/concurrent-map"
+  digest = "1:6a874e3ddfb9db2b42bd8c85b6875407c702fa868eed20634ff489bc896ccfd3"
+  name = "github.com/konsorten/go-windows-terminal-sequences"
   packages = ["."]
-  revision = "d4c23bd0e01134806215ffe65ba3fd22ec6721f7"
+  pruneopts = ""
+  revision = "5c8c8bd35d3832f5d134ae1e1e375b69a4d25242"
+  version = "v1.0.1"
 
 [[projects]]
+  digest = "1:5f48b818f16848d05cf74f4cbdd0cbe9e0dcddb3c459b4c510c6e2c8e1b4dff1"
   name = "github.com/sirupsen/logrus"
   packages = ["."]
-  revision = "f006c2ac4710855cf0f916dd6b77acf6b048dc6e"
-  version = "v1.0.3"
+  pruneopts = ""
+  revision = "ad15b42461921f1fb3529b058c6786c6a45d5162"
+  version = "v1.1.1"
 
 [[projects]]
   branch = "master"
+  digest = "1:36b1b85f11b8e2eb8577332a4002be4c6d81211976c7c7d4b0afacd1f5694641"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
-  revision = "94eea52f7b742c7cbe0b03b22f0c4c8631ece122"
+  pruneopts = ""
+  revision = "e84da0312774c21d64ee2317962ef669b27ffb41"
 
 [[projects]]
   branch = "master"
+  digest = "1:83016dd97ace160a9ef80b703b7255846094e7d322fcd790ef3759e412648c84"
   name = "golang.org/x/sys"
-  packages = ["unix","windows"]
-  revision = "8b4580aae2a0dd0c231a45d3ccb8434ff533b840"
+  packages = [
+    "unix",
+    "windows",
+  ]
+  pruneopts = ""
+  revision = "2772b66316d2c587efeb188dcd5ebc6987656e84"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "9488a00ed30e658f264608317928bc1cf051b22af567ce2d22124dfbaf20b1e3"
+  input-imports = [
+    "github.com/drdaeman/logdna-logrus",
+    "github.com/gogap/config",
+    "github.com/gogap/logrus_mate",
+    "github.com/sirupsen/logrus",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
