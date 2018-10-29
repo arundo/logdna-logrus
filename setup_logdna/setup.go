@@ -10,7 +10,7 @@ import (
 	_ "github.com/arundo/logdna-logrus"
 )
 
-func Setup(logLevel string, apiKey string, app string) {
+func Setup(logLevel string, apiKey string, appName string) {
 	utils.SetLogLevel(logLevel)
 	log.Infoln("Log level:", log.GetLevel())
 
@@ -41,12 +41,12 @@ func Setup(logLevel string, apiKey string, app string) {
     }
 }`,
 			apiKey,
-			app,
+			appName,
 		)
 
 		mate, _ := logrus_mate.NewLogrusMate(
 			logrus_mate.ConfigString(config),
-			logrus_mate.ConfigFile("logdna.conf"),
+			//logrus_mate.ConfigFile("logdna.conf"),
 			//logrus_mate.ConfigProvider(&config.HOCONConfigProvider{}), // default provider
 		)
 
