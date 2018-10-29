@@ -2,6 +2,7 @@ package setup_logdna
 
 import (
 	"fmt"
+	"io/ioutil"
 
 	"github.com/arundo/fabric-service-message-processor/src/utils"
 	"github.com/gogap/logrus_mate"
@@ -55,6 +56,9 @@ func Setup(logLevel string, apiKey string, appName string) {
 		)
 		if err != nil {
 			log.WithError(err).Error("Error when configuring LogDNA logger")
+		} else {
+			fmt.Println("Logging to std disabled in preference of LogDNA")
+			log.SetOutput(ioutil.Discard)
 		}
 	} else {
 		fmt.Println("Logging to std")
