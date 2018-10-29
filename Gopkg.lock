@@ -2,6 +2,14 @@
 
 
 [[projects]]
+  branch = "master"
+  digest = "1:51622a0317db36e5d22f954f2001781e4841344edd49149b0895693cbc247b7e"
+  name = "github.com/arundo/fabric-service-message-processor"
+  packages = ["src/utils"]
+  pruneopts = ""
+  revision = "ec145aacfa95f6ca868a1b0bd9de2f966ab42bbe"
+
+[[projects]]
   digest = "1:81c293b834a3fbfc4da94de703aa41911679e7476f22184269b645a810b2ef10"
   name = "github.com/drdaeman/logdna-logrus"
   packages = ["."]
@@ -19,6 +27,22 @@
   ]
   pruneopts = ""
   revision = "6065b2d05c3b6fe74694a73c9673806a970679e0"
+
+[[projects]]
+  digest = "1:4b6a43ba3296f26ea01ae125e50951f141c215dd18b5b91e9f397117b2951eb1"
+  name = "github.com/gobuffalo/uuid"
+  packages = ["."]
+  pruneopts = ""
+  revision = "3f701655805f1ef76e9963d1b377497a0c66d7cd"
+  version = "v2.0.5"
+
+[[projects]]
+  digest = "1:10c7813de846fa10aad0ea9bca34a3c20815d51250e48ba1a3c3c7572184aea8"
+  name = "github.com/gofrs/uuid"
+  packages = ["."]
+  pruneopts = ""
+  revision = "370558f003bfe29580cd0f698d8640daccdcc45c"
+  version = "v3.1.1"
 
 [[projects]]
   branch = "master"
@@ -75,6 +99,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/arundo/fabric-service-message-processor/src/utils",
     "github.com/drdaeman/logdna-logrus",
     "github.com/gogap/config",
     "github.com/gogap/logrus_mate",

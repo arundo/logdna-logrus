@@ -1,10 +1,13 @@
-package logdna
+package setup_logdna
 
 import (
 	"fmt"
+
 	"github.com/arundo/fabric-service-message-processor/src/utils"
 	"github.com/gogap/logrus_mate"
 	log "github.com/sirupsen/logrus"
+
+	_ "github.com/arundo/logdna-logrus"
 )
 
 func Setup(logLevel string, apiKey string) {
@@ -14,7 +17,7 @@ func Setup(logLevel string, apiKey string) {
 	if apiKey != "" {
 		log.Println("Setting up LogDNA logger")
 
-		config := fmt.Sprintf(`{
+		config := fmt.Sprintf(`elon {
     out.name = "stdout"
     level = "debug"
 
@@ -40,12 +43,18 @@ func Setup(logLevel string, apiKey string) {
 			apiKey,
 		)
 
-		err := logrus_mate.Hijack(
-			log.StandardLogger(),
+		mate, _ := logrus_mate.NewLogrusMate(
 			logrus_mate.ConfigString(config),
+			logrus_mate.ConfigFile("logdna.conf"),
+			//logrus_mate.ConfigProvider(&config.HOCONConfigProvider{}), // default provider
+		)
+
+		err := mate.Hijack(
+			log.StandardLogger(),
+			"elon",
 		)
 		if err != nil {
-			log.WithError(err).Error("Failed to configure LogDNA logger")
+			log.WithError(err).Error("Error when configuring LogDNA logger")
 		}
 	}
 }
