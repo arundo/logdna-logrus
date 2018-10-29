@@ -10,7 +10,7 @@ import (
 	_ "github.com/arundo/logdna-logrus"
 )
 
-func Setup(logLevel string, apiKey string) {
+func Setup(logLevel string, apiKey string, app string) {
 	utils.SetLogLevel(logLevel)
 	log.Infoln("Log level:", log.GetLevel())
 
@@ -34,13 +34,14 @@ func Setup(logLevel string, apiKey string) {
     hooks {
         logdna {
             api-key = "%s"
-            app = "tag-monitor"
+            app = "%s"
             flush = 1s
             json = true
         }
     }
 }`,
 			apiKey,
+			app,
 		)
 
 		mate, _ := logrus_mate.NewLogrusMate(
@@ -56,5 +57,7 @@ func Setup(logLevel string, apiKey string) {
 		if err != nil {
 			log.WithError(err).Error("Error when configuring LogDNA logger")
 		}
+	} else {
+		fmt.Println("Logging to std")
 	}
 }
