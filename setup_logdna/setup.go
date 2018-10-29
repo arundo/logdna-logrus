@@ -18,7 +18,6 @@ func Setup(logLevel string, apiKey string, appName string) {
 		log.Println("Setting up LogDNA logger")
 
 		config := fmt.Sprintf(`elon {
-    out.name = "stdout"
     level = "debug"
 
     formatter.name = "json"
