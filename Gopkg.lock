@@ -2,14 +2,6 @@
 
 
 [[projects]]
-  digest = "1:81c293b834a3fbfc4da94de703aa41911679e7476f22184269b645a810b2ef10"
-  name = "github.com/drdaeman/logdna-logrus"
-  packages = ["."]
-  pruneopts = ""
-  revision = "48409db437e7e00eec11581375fe8bd9afb48e5f"
-  version = "v0.1.0"
-
-[[projects]]
   branch = "master"
   digest = "1:0e707b696482e29296973f605aae92ee90bc8e5299728d1f7201bca5f650d12c"
   name = "github.com/go-akka/configuration"
@@ -45,37 +37,36 @@
   version = "v1.0.1"
 
 [[projects]]
-  digest = "1:5f48b818f16848d05cf74f4cbdd0cbe9e0dcddb3c459b4c510c6e2c8e1b4dff1"
+  digest = "1:9d57e200ef5ccc4217fe0a34287308bac652435e7c6513f6263e0493d2245c56"
   name = "github.com/sirupsen/logrus"
   packages = ["."]
   pruneopts = ""
-  revision = "ad15b42461921f1fb3529b058c6786c6a45d5162"
-  version = "v1.1.1"
+  revision = "bcd833dfe83d3cebad139e4a29ed79cb2318bf95"
+  version = "v1.2.0"
 
 [[projects]]
   branch = "master"
-  digest = "1:36b1b85f11b8e2eb8577332a4002be4c6d81211976c7c7d4b0afacd1f5694641"
+  digest = "1:a242f23ceb22423c0a2111d9488a2ab19a2e817111a4f3e2385f5f89a53e619f"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
   pruneopts = ""
-  revision = "e84da0312774c21d64ee2317962ef669b27ffb41"
+  revision = "e4dc69e5b2fd71dcaf8bd5d054eb936deb78d1fa"
 
 [[projects]]
   branch = "master"
-  digest = "1:83016dd97ace160a9ef80b703b7255846094e7d322fcd790ef3759e412648c84"
+  digest = "1:3f5c191d90f1cf365ff1f88e4b08eb766ee6ade1cb2e4efd7c316cf7e015ac17"
   name = "golang.org/x/sys"
   packages = [
     "unix",
     "windows",
   ]
   pruneopts = ""
-  revision = "2772b66316d2c587efeb188dcd5ebc6987656e84"
+  revision = "66b7b1311ac80bbafcd2daeef9a5e6e2cd1e2399"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/drdaeman/logdna-logrus",
     "github.com/gogap/config",
     "github.com/gogap/logrus_mate",
     "github.com/sirupsen/logrus",
